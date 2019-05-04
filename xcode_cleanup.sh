@@ -20,6 +20,12 @@ do
   echo ${msgs[$i]}" cleared"
 done
 
+# Clean up device support
+rm -Rf /Users/michaelmartinez/Library/Developer/Xcode/iOS\ DeviceSupport
+
+# Clean up unavailable iOS Simulators
+xcrun simctl delete unavailable
+
 
 # Clean up iOS Simulator
 ignoreFolders=("Applications" "Containers" "Library" "Root" "User" "tmpspace")
